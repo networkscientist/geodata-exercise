@@ -1,5 +1,5 @@
-#This small script is the answer to exercise 1
-def age_calc(age):   #This function will calculate the age to the next tenth
+# This small script is the answer to exercise 1
+def age_calc(age):  # This function will calculate the age to the next tenth
     """Calculate the age to the next tenth."""
     new_age = int((age // 10) * 10 + 10)
     return new_age
