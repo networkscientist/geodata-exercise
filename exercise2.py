@@ -33,10 +33,16 @@ def range_check(num):  # Checking if the passed number is within the range of al
         return False
 
 
-# The magic happens: Draw a luckyNumber between 0 and 100
-luckyNumber = random.randint(0, 100)
-success = False
-# The loop goes on as long as the user has not guessed correctly, the it stops.
-print("Let's begin... Please guess a number between 0 and 100:")
-while not success:
-    success = random_check(luckyNumber, get_guess())
+def gameplay():  # This function draws the lucky number and starts the guessing procedure.
+    """Draw a lucky number and start to guess."""
+    lucky_number = random.randint(0, 100)
+    success = False
+    print("Let's begin... Please guess a number between 0 and 100:")
+    # The magic happens: Draw a lucky_number between 0 and 100
+    while not success:
+        # The loop goes on as long as the user has not guessed correctly, then it stops.
+        success = random_check(lucky_number, get_guess())
+
+
+# Start the game
+gameplay()
