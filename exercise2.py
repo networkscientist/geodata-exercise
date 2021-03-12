@@ -5,15 +5,19 @@ def random_check(rand, guess):  # Takes the luckyNumber and the user's guess as 
     # has been guessed correctly. Print hints for the next guess and return True or False.
     """Takes the luckyNumber and the user's guess as an argument. Checks if the luckyNumber has been guessed
     correctly. Print hints for the next guess and return True or False. """
-    if rand > guess:
-        print("Go a little higher...")
-        return False
-    elif rand < guess:
-        print("Too high, go again...")
-        return False
+    if guess in range(0, 101):
+        if rand > guess:
+            print("Go a little higher...")
+            return False
+        elif rand < guess:
+            print("Too high, go again...")
+            return False
+        else:
+            print("Yay, You guessed correctly!")
+            return True
     else:
-        print("Yay, You guessed correctly!")
-        return True
+        print("Come on, enter a number within the specified range 0-100!")
+        return False
 
 
 def get_guess():  # This function gets a user's guess for the lucky number and returns it as an integer.
